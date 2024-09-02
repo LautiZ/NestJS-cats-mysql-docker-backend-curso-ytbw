@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_ytbw
+      MYSQL_DATABASE: db_crud_ytbw
+      MYSQL_USER: user_crud_ytbw
+      MYSQL_PASSWORD: root_ytbw
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - '3307:3306'
